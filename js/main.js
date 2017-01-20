@@ -8,5 +8,6 @@ function listaTareas()
     var contenido = document.createElement("li");
     contenido.innerHTML=textArea;
     textLista.appendChild(contenido);
+    textArea.getElementById("textArea").value=" ";
 }
 
