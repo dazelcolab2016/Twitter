@@ -12,6 +12,11 @@
     border-bottom-left-radius: 5%;
     
 }
+.borde
+{
+    border:1px solid #e0e0e0;
+    
+}
 
 
 
@@ -89,14 +94,14 @@
 }
 
 .btn-primary, .btn-primary:hover{
-  background-color: #333;
-  border-color: #333;
+  background-color: #337ab7;
+  border-color: #337ab7;
 }
 
 
 
 
-.input-box span:after {
+/*.input-box span:after {
   content: "";
   width: 0;
   height: 0;
@@ -106,6 +111,6 @@
   position: absolute;
   right: 100%;
   top: 10px;
-}
+}*/
 
 
