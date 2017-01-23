@@ -1,49 +1,45 @@
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bicis Locas</title>
-    <link rel="icon"
-      type="image/ico"
-      href="img/favicon.ico">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Prompt:200,300,400,500" rel="stylesheet">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="css/registro.css">
-  </head>
-  <body>
-   <section>
-       <div class="header">
-        <h2 id="form-signup-heading">
-            TODO APP
-        </h2>
-       </div>
-   </section>
-   
-    <section class="">
-      <div class="">
-        <form class="form-signup" novalidate>
-          <div class="name-container input-box">
-           <div class="email-container input-box">
+   <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-                <input type="textarea" id="textArea" class="form-control" placeholder="Ingrese Texto" autofocus="">
-                <button class= "btn  btn-primary" onclick="listaTareas()" type="submit">Registrar</button> 
-           </div>
-           <div class="borde">
-            <ul class="input-group borde" id = "textLista">
-                <li>
-                   limpio
-              </li>
-            </ul>           
-          </div>
+        <title>Document</title>
+   </head>
+  <body>
+         <!---seccion cabecera--->
+       <div class="header">
+           <div class="container">
+              <div class="row text-center">
+                  <strong>TODO APP</strong> 
+              </div>
+            </div>
+       </div>
+       <!---fin-seccion cabecera--->
+       <!---Seccion Mensaje--->
+       <div class="new-mensaje">
+         <div class="container">
+            <div class="row">
+               <textarea class="form-control" id="mensaje" placeholder="Aqui se mostrara tu mensaje"rows="5"></textarea>
+               <button class="btn  btn-primary  submit-btn" id="add" onClick="listaTareas()"  type="submit"><i class="fa fa-plus" aria-hidden="true"></i> Añadir tarea
+				</button>
+            </div>
          </div>
-        </form>
-      </div>  
-    </section>
-    <!-- /container -->
-      <script type='text/javascript' src='js/main.js'></script>
-     <script type='text/javascript' src='js/donottouchthisfile.js'></script>
+       </div>
+       <!---fin de Seccion Mensaje--->
+       <div class="tareas">
+          <div class="container">
+             <div class="row" id="lista-mensajes" >
+                 
+             </div> 
+          </div>
+       </div>
+       <!---Java Script--->
+     <script type='text/javascript' src='js/main.js'></script>
+     
   </body>
   </html>

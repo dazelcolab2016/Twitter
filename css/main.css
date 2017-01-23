@@ -1,0 +1,31 @@
+.header{
+    background-color:#E7E4E5;
+    margin-bottom:10px;
+    font-size:20px;
+    padding: 10px;
+        
+}
+textarea{
+    width:100%;
+    color:black;
+}
+.btn{
+    margin-top:10px;
+    color:white;
+    background-color: #66fdf8;
+}
+.agregar{
+    margin:10px;
+}
+.list:hover{
+    background-color: rgba(37,159,153,0.5);
+}
+i:hover{
+    font-size: 20px;
+}
+.icon{
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top.14
+}
