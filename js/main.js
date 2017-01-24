@@ -4,7 +4,7 @@ var listaMensajes = document.getElementById("lista-mensajes");
 function crearNodos (container,mensaje) {
     
     var area=document.createElement('div');
-    area.className = ("list checkbox option animated bounceIn");
+    area.className = ("list checkbox option animated bounceInDown");
     var tacho = document.createElement('i');
     tacho.className = "fa  fa-trash-o  tacho";
     var label = document.createElement('label');
