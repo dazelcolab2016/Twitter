@@ -1,5 +1,26 @@
+//var listaTareas = [["tarea",true],["t2",false]];
 
-var listaMensajes = document.getElementById("lista-mensajes");
+var listaTareas =[
+    {id:"mensaje",isDone:true}];
+
+function drawTaskList()
+{
+    var lista = document.getElementById("lista");
+    
+    for(var i in listaTareas)
+        {
+       var html = "<li> <input type='checkbox' "+(listaTareas[i].isDone?"checked":"")+"></input>"+listaTareas[i].id+"</li>";
+       
+        lista.innerHTML += html;
+            
+        }
+}
+
+
+
+
+    
+/*var listaMensajes = document.getElementById("lista-mensajes");
 
 function crearNodos(container, mensaje){
     var area = document.createElement('div');
@@ -50,7 +71,7 @@ function tachar(evt)
 	else
 		check.setAttribute("style","text-decoration:none");
 }
-
+*/
 
 
 
