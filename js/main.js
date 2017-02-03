@@ -1,7 +1,6 @@
 //var listaTareas = [["tarea",true],["t2",false]];
-""
- var listaTareas =[];
 
+ var listaTareas =[];
 function onButtonClick()
 {
     var inputMensaje = document.getElementById("mensaje").value;
@@ -10,12 +9,10 @@ function onButtonClick()
     
     drawTaskList();
     inputMensaje.value=" ";
-    
 }
 
 function drawTaskList()
 {
-  
     var lista = document.getElementById("lista");
     lista.innerHTML = "";
   
@@ -52,9 +49,10 @@ listaTareas.splice(_n, 1);
     
 /*var listaMensajes = document.getElementById("lista-mensajes");
 
-function crearNodos(container, mensaje){
-    var area = document.createElement('div');
-    area.className = "list , checkbox ,option animated zoomInDown";
+function crearNodos (container,mensaje) {
+    
+    var area=document.createElement('div');
+    area.className = ("list checkbox option animated bounceInDown");
     var tacho = document.createElement('i');
     tacho.className = "fa  fa-trash-o  tacho";
     var label = document.createElement('label');
@@ -70,10 +68,9 @@ function crearNodos(container, mensaje){
     checkbox.addEventListener('click',tachar);
 }
 
-function listaTareas()
-{
+function listaTareas() {
     var mensaje=document.getElementById("mensaje");
-        if((mensaje.length) == 0 || /^\s*$/.test(mensaje.value))
+        if((mensaje.length) == 0)
             {
             alert ("Ingresa un mensaje");
         }
@@ -87,8 +84,8 @@ function listaTareas()
     
 function eliminaNodos(evt)
 {
-	evt.target.parentNode.className= "list , checkbox , animated zoomOutDown"; 
-  	setTimeout(function(){
+	evt.target.parentNode.className= "list  checkbox   animated bounceOutRight"; 
+  	setTimeout (function() {
     listaMensajes.removeChild(evt.target.parentNode);  
   	}, 1000);  
 }
