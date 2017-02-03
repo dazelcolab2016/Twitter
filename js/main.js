@@ -1,22 +1,52 @@
 //var listaTareas = [["tarea",true],["t2",false]];
+""
+ var listaTareas =[];
 
-var listaTareas =[
-    {id:"mensaje",isDone:true}];
+function onButtonClick()
+{
+    var inputMensaje = document.getElementById("mensaje").value;
+    
+    listaTareas.push({nombre:inputMensaje,isDone:false});
+    
+    drawTaskList();
+    inputMensaje.value=" ";
+    
+}
 
 function drawTaskList()
 {
+  
     var lista = document.getElementById("lista");
-    
+    lista.innerHTML = "";
+  
     for(var i in listaTareas)
         {
-       var html = "<li> <input type='checkbox' "+(listaTareas[i].isDone?"checked":"")+"></input>"+listaTareas[i].id+"</li>";
+       var html = "<li class='list'> <input type='checkbox' onclick='tachar("+i+")' "+(listaTareas[i].isDone?"checked":"")+">"+"<span "+(listaTareas[i].isDone?"style='text-decoration:line-through'":"style='text-decoration:none'")+" id='new'>"+listaTareas[i].nombre+"</span></input>"+listaTareas[i].nombre+"<i onclick='eliminaNodos("+i+")' class='fa  fa-trash-o  tacho icon'></i></li>";
        
         lista.innerHTML += html;
-            
+                    
         }
 }
+function tachar(_index)
+{
+   var lista = document.getElementById("lista");
+	if(listaTareas[_index].isDone == false)
+    {
+        listaTareas[_index].isDone=true;
+       
+        
+    }else{
+		listaTareas[_index].isDone=false;
+        lista.childNodes[_index].childNodes[1].style.textDecoration="none";
+    }
+    drawTaskList();
+}
 
-
+function eliminaNodos(_n)
+{
+listaTareas.splice(_n, 1);
+    drawTaskList();  
+}
 
 
     
