@@ -1,6 +1,4 @@
-//var listaTareas = [["tarea",true],["t2",false]];
-
- var listaTareas =[];
+var listaTareas =[];
 function onButtonClick()
 {
     var inputMensaje = document.getElementById("mensaje").value;
