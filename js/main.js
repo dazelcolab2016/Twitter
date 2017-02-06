@@ -1,12 +1,14 @@
 var listaTareas =[];
 function onButtonClick()
 {
-    var inputMensaje = document.getElementById("mensaje").value;
-    
-    listaTareas.push({nombre:inputMensaje,isDone:false});
-    
+    var inputMensaje = document.getElementById("mensaje");
+
+    listaTareas.push({nombre:inputMensaje.value,isDone:false});
+
     drawTaskList();
     inputMensaje.value=" ";
+    inputMensaje.focus();
+
 }
 
 function drawTaskList()
@@ -21,7 +23,7 @@ function drawTaskList()
         lista.innerHTML += html;
                     
         }
-}
+   }
 function tachar(_index)
 {
    var lista = document.getElementById("lista");
@@ -43,6 +45,15 @@ listaTareas.splice(_n, 1);
     drawTaskList();  
 }
 
+function onMensajeKey(evt)
+{
+	if(evt.keyCode == 13)
+	{
+		var button = document.getElementById("add");
+        button.focus();
+	}
+        
+}
 
     
 /*var listaMensajes = document.getElementById("lista-mensajes");
